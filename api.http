@@ -1,0 +1,46 @@
+#USERS Rest
+### GET 
+GET http://localhost:8080/user/
+
+### POST
+POST http://localhost:8080/user/
+Content-Type: application/json
+
+{
+  "username": "Felpola",
+  "name": "Felipe Matthew",
+  "password": "123"
+}
+
+
+#TASK Rest
+### GET - List tasks
+GET http://localhost:8080/tasks/
+Authorization: Basic Felpola 123
+
+
+### POST WITH AUTH
+POST http://localhost:8080/tasks/
+Content-Type: application/json
+Authorization: Basic Felpola 123
+
+{
+  "description": "Tarefa de matemática",
+  "title": "aaaadfsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+  "priority": "BAIXA",
+  "startAt": "2023-10-18T16:45:00",
+  "endAt": "2023-10-19T21:00:00"
+}
+
+### PUT
+PUT http://localhost:8080/tasks/{idTask}
+Content-Type: application/json
+Authorization: Basic Felpola 123
+
+{
+  "description": "Tarefa de matemática ATUALIZADA",
+  "title": "Algebra",
+  "priority": "BAIXA",
+  "startAt": "2023-10-18T16:45:00",
+  "endAt": "2023-10-19T21:00:00"
+}
